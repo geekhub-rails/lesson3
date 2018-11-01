@@ -9,9 +9,21 @@
   </head>
 
   <body>
-
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+      <% if user_signed_in? %>
+      <span>
+        <%= current_user.email %> <%= "(#{current_user.role})" if current_user.role =="admin" %>
+        <%= link_to('users CRUD',  users_path) if current_user.role =="admin" %>
+      </span>
+        <li>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Login', new_user_session_path)  %>  
+        </li>
+      <% end %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
      <%= yield %>
   </body>
