@@ -1,0 +1,12 @@
+%h1 List of all users (only admin can see this)
+- if @users.empty?
+	%b No users
+- else
+	- @users.each do |i|
+		=  link_to i.name, user_path(i)
+		Role: #{i.role}
+		%br/
+		%br/
+
+%br/
+= link_to "New user", controller: "users", action: "new" 
