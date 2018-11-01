@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  
+  devise_for :users, path: 'auth'
   resources :users
-  #devise_for :users
  
   root to: "home#index"
 
