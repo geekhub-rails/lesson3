@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+ <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :user_email, disabled: :true%>
+  </div>
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :user_name %>
@@ -18,8 +23,10 @@
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.text_field :role, id: :user_role %>
+    <%= form.select :role, ["standard" , "admin"] %>
   </div>
+
+
 
   <div class="actions">
     <%= form.submit %>

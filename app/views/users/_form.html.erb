@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.text_field :role, id: :user_role %>
+    <%= form.select :role, ["standard" , "admin"] %>
   </div>
 
   <div class="actions">
