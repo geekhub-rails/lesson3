@@ -2,12 +2,12 @@
 
 = form_with scope: :user, url: users_path, local: true do |form|
 
-		= form.label :name
-		= form.text_field :name
+	= form.label :name
+	= form.text_field :name
 
-		= form.label :role
-		= form.text_field :role, placeholder: "user or admin"
+	= form.label :role
+	= form.text_field :role, placeholder: "user or admin"
 
-		= form.submit
+	= form.submit
 
 %br/

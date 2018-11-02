@@ -1,12 +1,13 @@
-%h1 List of all users (only admin can see this)
-- if @users.empty?
-	%b No users
-- else
-	- @users.each do |i|
-		=  link_to i.name, user_path(i)
-		Role: #{i.role}
-		%br/
-		%br/
+= render partial: "sign_in"
 
-%br/
-= link_to "New user", controller: "users", action: "new" 
+- if user_signed_in? && current_user.admin?
+	%h1 List of all users (only admin can see this)
+	- if @users.empty?
+		%b No users
+	- else
+		- @users.each do |i|
+			=  link_to i.name, user_path(i)
+			Role: #{i.role}
+- else
+	%br/
+	= render plain: "Please sigh in (or you dont have permissoins to see this page)"

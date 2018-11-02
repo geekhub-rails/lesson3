@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
 
     if @user.save
-      render 'new'
+      render 'index'
     else
       render 'new'
     end
