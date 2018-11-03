@@ -2,29 +2,44 @@
 <html>
   <head>
     <title>Lesson3App</title>
+    
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
-      <% if user_signed_in? %>
-      <span>
+  
+  <% if user_signed_in? %>
+      <nav class="navbar navbar-light" style="background-color: #ffafce;">
         <%= current_user.email %> <%= "(#{current_user.role})" if current_user.role =="admin" %>
+        <div class="right">
         <%= link_to('users CRUD',  users_path) if current_user.role =="admin" %>
-      </span>
-        <li>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
-        </li>
+         |
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>  
+         |
+              
+         <%= link_to('Home', root_path) %>  
+        </div>
+      </nav>       
       <% else %>
         <li>
         <%= link_to('Login', new_user_session_path)  %>  
         </li>
       <% end %>
+
+      
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
 
+    <div id="main">
      <%= yield %>
+    </div>
+    
+    <footer class="container-fluid bg-4 text-center">
+      <p>&copy; Liubov Tarasenko. GeekHub 2018</p> 
+    </footer>
   </body>
 </html>
