@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :show, only: %i[show edit update destroy]
-  before_action :authenticate_admin!, only: [:new, :show, :edit, :update, :destroy]
-  
+  before_action :authenticate_admin!, only: %i[new show edit update destroy]
+
   def index
     @users = User.all
   end
@@ -40,8 +40,8 @@ class UsersController < ApplicationController
   end
 
   def authenticate_admin!
-  	unless current_user.admin?
-  		render plain: "You dont have permissoins to see this page"
+    unless current_user.admin?
+      render plain: 'You dont have permissoins to see this page'
       end
     # if current_user is admin he will proceed to edit action
   end
