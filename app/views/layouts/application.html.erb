@@ -11,9 +11,9 @@
   </head>
 
   <body>
-  
+ <nav class="navbar navbar-light" style="background-color: #ffafce;">
   <% if user_signed_in? %>
-      <nav class="navbar navbar-light" style="background-color: #ffafce;">
+    
         <%= current_user.email %> <%= "(#{current_user.role})" if current_user.role =="admin" %>
         <div class="right">
         <%= link_to('users CRUD',  users_path) if current_user.role =="admin" %>
@@ -23,12 +23,11 @@
               
          <%= link_to('Home', root_path) %>  
         </div>
-      </nav>       
+             
       <% else %>
-        <li>
-        <%= link_to('Login', new_user_session_path)  %>  
-        </li>
+         <%= link_to('Login', new_user_session_path)  %>  
       <% end %>
+      </nav>
 
       
         <p class="notice"><%= notice %></p>
