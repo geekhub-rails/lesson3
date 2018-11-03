@@ -1,0 +1,9 @@
+- if user_signed_in?
+  %span
+    Hi, #{current_user.email}
+  = link_to 'Exit', destroy_user_session_path, :method => :delete
+  = link_to 'Home page', root_path
+- else
+  = link_to 'Sigh in', new_user_session_path
+  or #{link_to 'Registration', new_user_registration_path}
+  = link_to 'Home page', root_path
