@@ -1,0 +1,24 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.user-list {
+  width: 50%;
+  .user-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    .buttons-container {
+      button {
+        height: 100%;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
