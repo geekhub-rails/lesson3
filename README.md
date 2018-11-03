@@ -32,3 +32,6 @@ Users managament
 
 # CRUD page
 ![CRUD page](https://preview.ibb.co/mRG1Sf/2.png)
+
+# Create user page
+![Create user page](https://preview.ibb.co/k4037f/3.png)
