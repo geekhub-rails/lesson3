@@ -1,0 +1,12 @@
+<h1>Welcome!</h1>
+<div>
+  <% if user_signed_in? %>
+    <span>Здравствуйте, <%= current_user.email %></span>
+    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+    <% if current_user.admin %>
+      <p><%= link_to 'Dashboard', admin_dashboard_url %></p>
+    <% end %>
+  <% else %>
+    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+  <% end %>
+</div>

@@ -1,0 +1,18 @@
+<%= link_to 'HOME', '/' %>
+<h1>Welcome to dashboard!</h1>
+<%= button_to 'Create', "/admin/dashboard/create", method: :get, class: 'btn btn-create' %>
+<ul class="user-list">
+  <% @users.each do |user| %>
+    <li class="user-item">
+      <div class="user-item-data">
+        <p>ID: <%= user.id %></p>
+        <p>EMAIL: <%= user.email %></p>
+        <p>NAME: <%= user.name %></p>
+      </div>
+      <div class="buttons-container">
+        <%= button_to 'Edit', "/admin/dashboard/#{user.id}/edit", method: :get %>
+        <%= button_to 'Remove', admin_dashboard_url(id: user.id), :confirm => 'Are you sure?', method: :delete %>
+      </div>
+    </li>
+  <% end %>
+</ul>
