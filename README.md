@@ -35,3 +35,6 @@ Users managament
 
 # Create user page
 ![Create user page](https://preview.ibb.co/k4037f/3.png)
+
+# Edit user page
+![edit user page](https://preview.ibb.co/nm29hf/5.png)
