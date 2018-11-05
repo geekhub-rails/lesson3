@@ -1,0 +1,63 @@
+.right {
+  float: right;
+  
+}
+#main{
+  min-height: 400px;
+  padding: 30px;
+  width: 100%;
+}
+#home_img{
+  text-align: center;
+}
+.create{
+  border: 2px solid #ffafce !important;
+}
+form label{
+  width: 150px;
+  text-align: left;
+}
+select{
+  background-color: lightgray;
+  padding: 4px;
+  width: 195px;
+}
+
+
+a:hover{
+  background: none !important;
+}
+
+table a, table a:visited{
+  color: #ff00bf;
+}
+
+
+ #center_th{
+   text-align: center;
+ }
+ #show_tb{
+   border:2px solid #ffafce;
+   width: 800px;
+   margin-bottom: 50px;
+   th{
+     background:rgba(255, 198, 198, 0.38);
+     border-right:2px solid #ffafce;
+   }
+ }
+
+ form{
+   margin-bottom: 50px;
+   padding-top: 30px;
+ }
+
+#index_tb{
+  border:2px solid #ffafce;
+  margin-bottom: 50px;
+  
+}
+#index_tb th{
+  background:rgba(255, 198, 198, 0.38);
+  border-bottom:2px solid #ffafce;
+}
+

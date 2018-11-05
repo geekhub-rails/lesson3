@@ -9,3 +9,35 @@ Users managament
 - Admin should be able to CRUD other users and admin (scaffold)
 - User with role `user` should be able to see only welcome page
 - Use device gem for authentication
+
+# Difficulties
+ логичный конфликт devise vs scaffold  сгенерировались одни и те же модели. нужно было переименовать models/user.rb и 
+ закоментировавать в routes.rb "devise_for :users" иначе scaffold не добавлялся и вылетал с ошибкой (потом вернула обратно
+ , удалила юзера созданого скаффолдом). 
+ 
+ совпали некоторые роуты девайса и скаффолда (users/sign_in и users/:id) пришлось добавить кастомный path("auth") для
+ роутов девайса, дальше попрвить хелперы урлов девайса (помогали ошибки при рендере).
+ 
+ переписала миграцию скаффолда, так, чтобы оно добавляла одно только поле в уже созданную девайсом таблицу (скаффолд 
+ предлагал свою таблицу юзеров).
+ 
+ было бы легче использовать только девайс, а CRUD методы сделать самой (но делала по заданию).
+ 
+ при подключении gem bootstrap выпала ошибка "Autoprefixer doesn’t support Node v4.2.6. Update it." добавила gem "mini-racer".
+ 
+ 
+
+# Home page
+![Home page](https://preview.ibb.co/c8rF3L/1.png)
+
+# CRUD page
+![CRUD page](https://preview.ibb.co/ejyZYL/9.png)
+
+# Create user page
+![Create user page](https://preview.ibb.co/hcuV7f/12.png)
+
+# Edit user page
+![edit user page](https://preview.ibb.co/gnaWDL/11.png)
+
+# Show user page
+![show user page](https://preview.ibb.co/dC6cnf/10.png)
