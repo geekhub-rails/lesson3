@@ -16,7 +16,7 @@
     
         <%= current_user.email %> <%= "(#{current_user.role})" if current_user.role =="admin" %>
         <div class="right">
-        <%= link_to('users CRUD',  users_path) if current_user.role =="admin" %>
+        <%= link_to('Users CRUD',  users_path) if current_user.role =="admin" %>
          |
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>  
          |

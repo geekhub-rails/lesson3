@@ -27,3 +27,37 @@ select{
 a:hover{
   background: none !important;
 }
+
+table a, table a:visited{
+  color: #ff00bf;
+}
+
+
+ #center_th{
+   text-align: center;
+ }
+ #show_tb{
+   border:2px solid #ffafce;
+   width: 800px;
+   margin-bottom: 50px;
+   th{
+     background:rgba(255, 198, 198, 0.38);
+     border-right:2px solid #ffafce;
+   }
+ }
+
+ form{
+   margin-bottom: 50px;
+   padding-top: 30px;
+ }
+
+#index_tb{
+  border:2px solid #ffafce;
+  margin-bottom: 50px;
+  
+}
+#index_tb th{
+  background:rgba(255, 198, 198, 0.38);
+  border-bottom:2px solid #ffafce;
+}
+

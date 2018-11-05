@@ -79,6 +79,6 @@ class UsersController < ApplicationController
     end
 
     def authenticate_admin!
-     redirect_to (root_path) if current_user.role == "standard"
+      redirect_to (root_path) if current_user.role == "standard"
     end
 end
