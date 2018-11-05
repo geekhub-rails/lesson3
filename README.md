@@ -31,10 +31,13 @@ Users managament
 ![Home page](https://preview.ibb.co/c8rF3L/1.png)
 
 # CRUD page
-![CRUD page](https://preview.ibb.co/hmSZhf/4.png)
+![CRUD page](https://preview.ibb.co/ejyZYL/9.png)
 
 # Create user page
-![Create user page](https://preview.ibb.co/k4037f/3.png)
+![Create user page](https://preview.ibb.co/hcuV7f/12.png)
 
 # Edit user page
-![edit user page](https://preview.ibb.co/nm29hf/5.png)
+![edit user page](https://preview.ibb.co/gnaWDL/11.png)
+
+# Show user page
+![show user page](https://preview.ibb.co/dC6cnf/10.png)
