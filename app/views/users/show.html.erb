@@ -1,0 +1,14 @@
+<%= render partial: "sign_in" %>
+
+<h1>List of all users (only admin can see this)</h1>
+<% if @users.empty? %>
+  <b>No users</b>
+<% else %>
+  <% @users.each do |i| %>
+    <%= link_to i.email, user_path(i) %>
+    Role: <%= i.role %>
+    <%= link_to 'Edit', edit_user_path(i) %>
+    <%= link_to 'Delete', i, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br/>
+  <% end %>
+<% end %>
